@@ -51,7 +51,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.11.1, @babel/core@npm:^7.22.5":
+"@babel/core@npm:^7.11.1, @babel/core@npm:^7.22.5, @babel/core@npm:^7.22.9":
   version: 7.22.9
   resolution: "@babel/core@npm:7.22.9"
   dependencies:
@@ -1203,7 +1203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.11.0":
+"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.22.9":
   version: 7.22.9
   resolution: "@babel/preset-env@npm:7.22.9"
   dependencies:
@@ -1321,13 +1321,6 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.13.11
   checksum: e585338287c4514a713babf4fdb8fc2a67adcebab3e7723a739fc62c79cfda875b314c90fd25f827afb150d781af97bc16c85bfdbfa2889f06053879a1ddb597
-  languageName: node
-  linkType: hard
-
-"@babel/standalone@npm:^7.20.0":
-  version: 7.22.9
-  resolution: "@babel/standalone@npm:7.22.9"
-  checksum: 5a516233134b99a103324d5027f505bd1acfa62dc4092e3a1ca4c62537fdbc6e43aab2023edcf8980fec5d124668ee7d7e4de1161444d53d10396a0ecb7201fe
   languageName: node
   linkType: hard
 
@@ -1664,7 +1657,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.13":
+"@jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.13, @jridgewell/sourcemap-codec@npm:^1.4.15":
   version: 1.4.15
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.15"
   checksum: b881c7e503db3fc7f3c1f35a1dd2655a188cc51a3612d76efc8a6eb74728bef5606e6758ee77423e564092b4a518aba569bbb21c9bac5ab7a35b0c6ae7e344c8
@@ -1998,19 +1991,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-legacy@npm:^2.0.1":
-  version: 2.3.1
-  resolution: "@vitejs/plugin-legacy@npm:2.3.1"
+"@vitejs/plugin-legacy@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@vitejs/plugin-legacy@npm:4.1.1"
   dependencies:
-    "@babel/standalone": ^7.20.0
-    core-js: ^3.26.0
-    magic-string: ^0.26.7
-    regenerator-runtime: ^0.13.10
-    systemjs: ^6.13.0
+    "@babel/core": ^7.22.9
+    "@babel/preset-env": ^7.22.9
+    browserslist: ^4.21.9
+    core-js: ^3.31.1
+    magic-string: ^0.30.1
+    regenerator-runtime: ^0.13.11
+    systemjs: ^6.14.1
   peerDependencies:
     terser: ^5.4.0
-    vite: ^3.0.0
-  checksum: ade1495ac289ab15a87c788e11d6c043d60ddc834ad04e6976b81932e4a85d448d2c9fb6eec9e835ca4ae8c585ca1bb0b064ca898571d6dcc821cdf26fde70aa
+    vite: ^4.0.0
+  checksum: ba4852d466096629fb983d85381c370a6d1c498eb33945067cd797cab59ecbe8271b25e71008d9374c069bb88913d3b312c62d35398079580482b48a4a923fa0
   languageName: node
   linkType: hard
 
@@ -2723,7 +2718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.26.0":
+"core-js@npm:^3.31.1":
   version: 3.32.0
   resolution: "core-js@npm:3.32.0"
   checksum: 52921395028550e4c9d21d47b9836439bb5b6b9eefc34d45a3948a68d81fdd093acc0fadf69f9cf632b82f01f95f22f484408a93dd9e940b19119ac204cd2925
@@ -2896,7 +2891,7 @@ __metadata:
     "@types/node": ^18.15.5
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
-    "@vitejs/plugin-legacy": ^2.0.1
+    "@vitejs/plugin-legacy": ^4.1.1
     "@vitejs/plugin-react": ^4.0.3
     axios: ^1.4.0
     dayjs: ^1.11.7
@@ -2924,7 +2919,6 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-i18next: ^12.2
-    react-otp-input: ^2.4.0
     react-redux: ^8.0.2
     react-resize-detector: ^8.0.4
     react-router-dom: ^6.8.2
@@ -2935,7 +2929,7 @@ __metadata:
     svgo: ^3.0.2
     terser: ^5.14.2
     typescript: ^5.0.2
-    vite: ^4.4.5
+    vite: ^4.4.7
     vite-plugin-image-optimizer: ^1.1.2
     vite-plugin-pwa: ^0.14.5
     workbox-core: ^7.0.0
@@ -4885,21 +4879,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.26.7":
-  version: 0.26.7
-  resolution: "magic-string@npm:0.26.7"
-  dependencies:
-    sourcemap-codec: ^1.4.8
-  checksum: 89b0d60cbb32bbf3d1e23c46ea93db082d18a8230b972027aecb10a40bba51be519ecce0674f995571e3affe917b76b09f59d8dbc9a1b2c9c4102a2b6e8a2b01
-  languageName: node
-  linkType: hard
-
 "magic-string@npm:^0.27.0":
   version: 0.27.0
   resolution: "magic-string@npm:0.27.0"
   dependencies:
     "@jridgewell/sourcemap-codec": ^1.4.13
   checksum: 273faaa50baadb7a2df6e442eac34ad611304fc08fe16e24fe2e472fd944bfcb73ffb50d2dc972dc04e92784222002af46868cb9698b1be181c81830fd95a13e
+  languageName: node
+  linkType: hard
+
+"magic-string@npm:^0.30.1":
+  version: 0.30.2
+  resolution: "magic-string@npm:0.30.2"
+  dependencies:
+    "@jridgewell/sourcemap-codec": ^1.4.15
+  checksum: c0bbb9b27b2772e6bfaa5d0f6452d47c462d588ae7c43fbaac062b07836d3ec0140fcdd42a57aa53ed990abafcdd0fc17907813921b5df04eccf43e67674bc57
   languageName: node
   linkType: hard
 
@@ -5610,16 +5604,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-otp-input@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "react-otp-input@npm:2.4.0"
-  peerDependencies:
-    react: ^16.2.0
-    react-dom: ^16.2.0
-  checksum: c73230be43fcc4d4abf8c39e9fe546a40637dae3e9633dc0af1727bc6ef14839b7e2d455216208ab718697c40513781740c95a2c300e8c5513954842e18c1dbf
-  languageName: node
-  linkType: hard
-
 "react-redux@npm:^8.0.2":
   version: 8.1.2
   resolution: "react-redux@npm:8.1.2"
@@ -5777,7 +5761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.10, regenerator-runtime@npm:^0.13.11":
+"regenerator-runtime@npm:^0.13.11":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
   checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
@@ -6481,7 +6465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systemjs@npm:^6.13.0":
+"systemjs@npm:^6.14.1":
   version: 6.14.1
   resolution: "systemjs@npm:6.14.1"
   checksum: a72992339e858000892596705ec8cabf5166fc2db6272b5994c788641c3755115920b7a7914c9b8894ef08bfb75f4f96c3086c6b18399a2b22e303ecd5ac6570
@@ -6851,7 +6835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.4.5":
+"vite@npm:^4.4.7":
   version: 4.4.7
   resolution: "vite@npm:4.4.7"
   dependencies:
