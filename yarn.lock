@@ -1948,7 +1948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.6":
+"@types/react-dom@npm:^18.2.7":
   version: 18.2.7
   resolution: "@types/react-dom@npm:18.2.7"
   dependencies:
@@ -1957,7 +1957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.14":
+"@types/react@npm:*, @types/react@npm:^18.2.15":
   version: 18.2.17
   resolution: "@types/react@npm:18.2.17"
   dependencies:
@@ -2014,7 +2014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^4.0.1":
+"@vitejs/plugin-react@npm:^4.0.3":
   version: 4.0.3
   resolution: "@vitejs/plugin-react@npm:4.0.3"
   dependencies:
@@ -2894,21 +2894,21 @@ __metadata:
     "@types/js-cookie": ^3.0.3
     "@types/lodash-es": ^4.17.7
     "@types/node": ^18.15.5
-    "@types/react": ^18.2.14
-    "@types/react-dom": ^18.2.6
+    "@types/react": ^18.2.15
+    "@types/react-dom": ^18.2.7
     "@vitejs/plugin-legacy": ^2.0.1
-    "@vitejs/plugin-react": ^4.0.1
+    "@vitejs/plugin-react": ^4.0.3
     axios: ^1.4.0
     dayjs: ^1.11.7
-    eslint: ^8.43.0
+    eslint: ^8.45.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-prettier: ^8.8.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jsx-a11y: ^6.5.1
     eslint-plugin-prettier: ^4.0.0
-    eslint-plugin-react: ^7.29.4
+    eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-react-refresh: ^0.4.1
+    eslint-plugin-react-refresh: ^0.4.3
     eslint-plugin-security: ^1.5.0
     framer-motion: ^10.8.5
     history: ^5.3.0
@@ -2935,7 +2935,7 @@ __metadata:
     svgo: ^3.0.2
     terser: ^5.14.2
     typescript: ^5.0.2
-    vite: ^4.3.9
+    vite: ^4.4.5
     vite-plugin-image-optimizer: ^1.1.2
     vite-plugin-pwa: ^0.14.5
     workbox-core: ^7.0.0
@@ -3424,7 +3424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-refresh@npm:^0.4.1":
+"eslint-plugin-react-refresh@npm:^0.4.3":
   version: 0.4.3
   resolution: "eslint-plugin-react-refresh@npm:0.4.3"
   peerDependencies:
@@ -3433,7 +3433,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.29.4":
+"eslint-plugin-react@npm:^7.32.2":
   version: 7.33.1
   resolution: "eslint-plugin-react@npm:7.33.1"
   dependencies:
@@ -3484,7 +3484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.43.0":
+"eslint@npm:^8.45.0":
   version: 8.46.0
   resolution: "eslint@npm:8.46.0"
   dependencies:
@@ -6851,7 +6851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.3.9":
+"vite@npm:^4.4.5":
   version: 4.4.7
   resolution: "vite@npm:4.4.7"
   dependencies:

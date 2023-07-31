@@ -1,7 +1,7 @@
+import { history, store } from '@redux/store';
 import { Provider } from 'react-redux';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import { HistoryRouter as Router } from 'redux-first-history/rr6';
-import { history, store } from '@redux/store';
 import { useTranslation } from 'react-i18next';
 
 import '@styles/App.scss';
