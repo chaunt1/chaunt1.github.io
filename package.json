@@ -75,7 +75,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.7",
     "vite-plugin-image-optimizer": "^1.1.2",
-    "vite-plugin-pwa": "^0.14.5",
+    "vite-plugin-pwa": "^0.16.4",
     "workbox-core": "^7.0.0",
     "workbox-precaching": "^7.0.0",
     "workbox-routing": "^7.0.0",
