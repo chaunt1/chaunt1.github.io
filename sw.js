@@ -1445,7 +1445,7 @@ class fe extends U {
 self.__WB_DISABLE_DEV_LOGS = !0;
 const de = "chaunt-" + j.runtime;
 re();
-ce([{"revision":null,"url":"assets/index-2dbe80eb.js"},{"revision":null,"url":"assets/index-2eff615b.css"},{"revision":null,"url":"assets/index-legacy-a8e6b372.js"},{"revision":null,"url":"assets/polyfills-legacy-9fd7786a.js"},{"revision":null,"url":"assets/react-9eab904f.js"},{"revision":null,"url":"assets/react-legacy-47724615.js"},{"revision":null,"url":"assets/vendor-87235f62.js"},{"revision":null,"url":"assets/vendor-legacy-89e9f821.js"},{"revision":"109ec4431cc544732fe98faa224fa410","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"c5cf16ca01a63d775ade364f91aa8057","url":"manifest.webmanifest"}]);
+ce([{"revision":null,"url":"assets/index-436dcf57.js"},{"revision":null,"url":"assets/index-73bd2626.css"},{"revision":null,"url":"assets/index-legacy-ff8810ac.js"},{"revision":null,"url":"assets/polyfills-legacy-9fd7786a.js"},{"revision":null,"url":"assets/react-9eab904f.js"},{"revision":null,"url":"assets/react-legacy-47724615.js"},{"revision":null,"url":"assets/vendor-87235f62.js"},{"revision":null,"url":"assets/vendor-legacy-89e9f821.js"},{"revision":"af457218a8c9f732fed1d1ad0a4648d9","url":"index.html"},{"revision":"1872c500de691dce40960bb85481de07","url":"registerSW.js"},{"revision":"c5cf16ca01a63d775ade364f91aa8057","url":"manifest.webmanifest"}]);
 v(new oe(new ue({ cacheName: de })));
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", () => self.clients.claim());
