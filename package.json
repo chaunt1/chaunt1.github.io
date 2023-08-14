@@ -39,11 +39,13 @@
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
+    "react-animated-cursor": "^2.8.1",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2",
     "react-redux": "^8.0.2",
     "react-resize-detector": "^9.1.0",
     "react-router-dom": "^6.8.2",
+    "redux": "^4.1.1",
     "redux-first-history": "^5.1.1",
     "socket.io-client": "^4.5.1",
     "vite-plugin-image-optimizer": "^1.1.2"

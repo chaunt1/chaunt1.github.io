@@ -2543,11 +2543,13 @@ __metadata:
     lodash: ^4.17.21
     prettier: ^3.0.0
     react: ^18.2.0
+    react-animated-cursor: ^2.8.1
     react-dom: ^18.2.0
     react-i18next: ^12.2
     react-redux: ^8.0.2
     react-resize-detector: ^9.1.0
     react-router-dom: ^6.8.2
+    redux: ^4.1.1
     redux-first-history: ^5.1.1
     sass: ^1.59.3
     socket.io-client: ^4.5.1
@@ -5545,6 +5547,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-animated-cursor@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "react-animated-cursor@npm:2.8.1"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 5943f81f6a9359969545590f106a1a652a1cc51250c48fa14445184bc611ec9167f39a9a2c2b805f2cb9129ca570e093f66185770734ce6c38dafb26f864ed9f
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -5712,7 +5724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.2.1":
+"redux@npm:^4.1.1, redux@npm:^4.2.1":
   version: 4.2.1
   resolution: "redux@npm:4.2.1"
   dependencies:
