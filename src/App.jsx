@@ -1,22 +1,28 @@
-import { history, store } from '@redux/store';
-import { Provider } from 'react-redux';
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { HistoryRouter as Router } from 'redux-first-history/rr6';
+import { createBrowserRouter, RouterProvider, Link, Navigate, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AnimatedCursor from 'react-animated-cursor';
 
 import '@styles/App.scss';
 
+const router = createBrowserRouter([
+  {
+    path: '',
+    element: <Home />,
+  },
+  {
+    path: 'about',
+    element: <About />,
+  },
+  {
+    path: '*',
+    element: <Navigate to='' />,
+  },
+]);
+
 function App() {
   return (
-    <Provider store={store}>
-      <Router history={history}>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
-      </Router>
+    <>
+      <RouterProvider router={router} />
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
@@ -26,13 +32,13 @@ function App() {
         showSystemCursor={true}
         hasBlendMode={true}
         outerStyle={{
-          border: '3px solid var(--cursor-color)'
+          border: '3px solid var(--cursor-color)',
         }}
         innerStyle={{
-          backgroundColor: 'var(--cursor-color)'
+          backgroundColor: 'var(--cursor-color)',
         }}
       />
-    </Provider>
+    </>
   );
 }
 

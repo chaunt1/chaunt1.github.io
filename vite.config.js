@@ -16,7 +16,6 @@ export const aliases = {
   '@hooks': path.resolve(__dirname, 'src/hooks'),
   '@layout': path.resolve(__dirname, 'src/layout'),
   '@pages': path.resolve(__dirname, 'src/pages'),
-  '@redux': path.resolve(__dirname, 'src/redux'),
   '@services': path.resolve(__dirname, 'src/services'),
   '@styles': path.resolve(__dirname, 'src/styles'),
   '@utils': path.resolve(__dirname, 'src/utils'),
@@ -44,24 +43,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          react: [
-            'react',
-            'react-dom',
-            'react-i18next',
-            'react-redux',
-            'react-resize-detector',
-            'react-router-dom',
-            'redux-first-history',
-          ],
-          vendor: [
-            'axios',
-            'history',
-            'i18next',
-            'i18next-browser-languagedetector',
-            'i18next-http-backend',
-            'js-cookie',
-            'lodash',
-          ],
+          react: ['react', 'react-dom', 'react-i18next', 'react-resize-detector', 'react-router-dom'],
+          vendor: ['axios', 'i18next', 'i18next-browser-languagedetector', 'i18next-http-backend', 'js-cookie', 'lodash'],
           // else: use index.[id].js
         },
       },
