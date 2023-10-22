@@ -2,10 +2,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-
-const isProdMode = process.env.NODE_ENV === 'production';
 
 export const aliases = {
   '@': path.resolve(__dirname, 'src'),
@@ -38,7 +35,7 @@ export default defineConfig({
     alias: aliases,
   },
   build: {
-    sourcemap: !isProdMode,
+    sourcemap: !process.env.NODE_ENV === 'production',
     minify: 'terser',
     rollupOptions: {
       output: {
@@ -65,34 +62,6 @@ export default defineConfig({
     }),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|webp|svg)$/i,
-    }),
-    VitePWA({
-      mode: isProdMode ? 'production' : 'development',
-      injectRegister: 'auto',
-      registerType: 'autoUpdate',
-      strategies: 'injectManifest',
-      srcDir: 'src',
-      filename: 'sw.ts',
-      outDir: 'dist',
-      devOptions: {
-        enabled: false,
-        type: 'module',
-      },
-      injectManifest: {
-        swDest: 'dist/sw.ts',
-      },
-      manifest: {
-        name: 'chaunt_vite_template',
-        short_name: 'chaunt_vite_template',
-        prefer_related_applications: true,
-
-        related_applications: [
-          {
-            platform: 'play',
-            url: 'https://play.google.com/store/apps/details?id=vn.abs.app',
-          },
-        ],
-      },
     }),
   ],
 });
