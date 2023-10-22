@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@fluentui/react-components": "^9.35.1",
     "axios": "^1.4.0",
     "dayjs": "^1.11.7",
     "framer-motion": "^10.8.5",
