@@ -79,7 +79,7 @@ export default defineConfig({
         type: 'module',
       },
       injectManifest: {
-        swDest: 'dist/sw.js',
+        swDest: 'dist/sw.ts',
       },
       manifest: {
         name: 'chaunt_vite_template',
