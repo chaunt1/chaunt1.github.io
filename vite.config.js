@@ -36,7 +36,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: !process.env.NODE_ENV === 'production',
-    minify: 'terser',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -44,14 +44,6 @@ export default defineConfig({
           vendor: ['axios', 'i18next', 'i18next-browser-languagedetector', 'i18next-http-backend', 'js-cookie', 'lodash'],
           // else: use index.[id].js
         },
-      },
-    },
-    terserOptions: {
-      format: {
-        beautify: false,
-      },
-      compress: {
-        passes: 3,
       },
     },
   },
