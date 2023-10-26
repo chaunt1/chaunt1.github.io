@@ -35,7 +35,7 @@ export default defineConfig({
     alias: aliases,
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     sourcemap: !process.env.NODE_ENV === 'production',
     minify: 'esbuild',
     rollupOptions: {
