@@ -5,13 +5,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bunx --bun vite",
-    "dev-staging": "bunx --bun vite --mode staging",
-    "build": "tsc && bunx --bun vite build",
-    "build-dev": "tsc && bunx --bun vite build --mode development",
-    "build-test": "tsc && bunx --bun vite build --mode test",
-    "build-staging": "tsc && bunx --bun vite build --mode staging",
-    "preview": "bunx --bun vite preview",
+    "dev": "vite",
+    "dev-staging": "vite --mode staging",
+    "build": "vite build",
+    "build-dev": "vite build --mode development",
+    "build-test": "vite build --mode test",
+    "build-staging": "vite build --mode staging",
+    "preview": "vite preview",
     "prepare": "husky install",
     "lint": "eslint ./src/**/*.{js,jsx}",
     "lint:fix": "eslint ./src/**/*.{js,jsx} --fix",
@@ -46,13 +46,6 @@
     "socket.io-client": "^4.5.1"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.3",
-    "@types/lodash-es": "^4.17.7",
-    "@types/node": "^20.4.5",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-legacy": "^4.1.1",
     "@vitejs/plugin-react": "^4.0.4",
     "eslint": "^8.45.0",
@@ -70,7 +63,6 @@
     "prettier": "^3.0.0",
     "sass": "^1.59.3",
     "svgo": "^3.0.2",
-    "typescript": "^5.0.2",
     "vite": "^4.5.0",
     "vite-plugin-image-optimizer": "^1.1.7"
   }

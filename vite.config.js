@@ -31,10 +31,11 @@ export default defineConfig({
   },
   envPrefix: 'chaunt',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.json'],
+    extensions: ['.js', '.jsx', '.scss', '.json'],
     alias: aliases,
   },
   build: {
+    outDir: 'build',
     sourcemap: !process.env.NODE_ENV === 'production',
     minify: 'esbuild',
     rollupOptions: {
