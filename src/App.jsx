@@ -1,6 +1,8 @@
-import { createBrowserRouter, RouterProvider, Link, Navigate, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AnimatedCursor from 'react-animated-cursor';
+
+import DashboardLayout from '@layout/Dashboard';
 
 import '@styles/App.scss';
 
@@ -8,6 +10,16 @@ const router = createBrowserRouter([
   {
     path: '',
     element: <Home />,
+  },
+  {
+    element: <DashboardLayout />,
+    path: 'dashboard',
+    children: [
+      {
+        path: '',
+        element: '',
+      },
+    ],
   },
   {
     path: 'about',
@@ -29,8 +41,8 @@ function App() {
         innerScale={1}
         outerScale={2}
         outerAlpha={0}
-        showSystemCursor={true}
-        hasBlendMode={true}
+        showSystemCursor
+        hasBlendMode
         outerStyle={{
           border: '3px solid var(--cursor-color)',
         }}
