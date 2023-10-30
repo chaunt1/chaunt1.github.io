@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider, Link, Navigate } from 'react-route
 import { useTranslation } from 'react-i18next';
 import AnimatedCursor from 'react-animated-cursor';
 
-import DashboardLayout from '@layout/Dashboard';
+import DashboardLayout from '@layout/dashboard';
 
 import '@styles/App.scss';
 
