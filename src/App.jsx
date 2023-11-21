@@ -1,38 +1,76 @@
-import { history, store } from '@redux/store';
-import { Provider } from 'react-redux';
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { HistoryRouter as Router } from 'redux-first-history/rr6';
+import { createBrowserRouter, RouterProvider, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AnimatedCursor from 'react-animated-cursor';
 
+import DashboardLayout from '@layout/dashboard';
+
 import '@styles/App.scss';
+
+const router = createBrowserRouter([
+  {
+    path: '',
+    element: <Home />,
+  },
+  {
+    element: <DashboardLayout />,
+    path: 'dashboard',
+    children: [
+      {
+        path: 'overview',
+        element: '',
+      },
+      {
+        path: 'order',
+        element: '',
+      },
+      {
+        path: 'category',
+        element: '',
+      },
+      {
+        path: 'product',
+        element: '',
+      },
+      {
+        path: 'user',
+        element: '',
+      },
+      {
+        path: 'setting',
+        element: '',
+      },
+    ],
+  },
+  {
+    path: 'about',
+    element: <About />,
+  },
+  {
+    path: '*',
+    element: <Navigate to='' />,
+  },
+]);
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router history={history}>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
-      </Router>
+    <>
+      <RouterProvider router={router} />
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
         innerScale={1}
         outerScale={2}
         outerAlpha={0}
-        showSystemCursor={true}
-        hasBlendMode={true}
+        showSystemCursor
+        hasBlendMode
         outerStyle={{
-          border: '3px solid var(--cursor-color)'
+          border: '3px solid var(--cursor-color)',
         }}
         innerStyle={{
-          backgroundColor: 'var(--cursor-color)'
+          backgroundColor: 'var(--cursor-color)',
         }}
       />
-    </Provider>
+    </>
   );
 }
 

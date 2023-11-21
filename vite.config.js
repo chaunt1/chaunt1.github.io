@@ -2,10 +2,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-
-const isProdMode = process.env.NODE_ENV === 'production';
 
 export const aliases = {
   '@': path.resolve(__dirname, 'src'),
@@ -16,7 +13,6 @@ export const aliases = {
   '@hooks': path.resolve(__dirname, 'src/hooks'),
   '@layout': path.resolve(__dirname, 'src/layout'),
   '@pages': path.resolve(__dirname, 'src/pages'),
-  '@redux': path.resolve(__dirname, 'src/redux'),
   '@services': path.resolve(__dirname, 'src/services'),
   '@styles': path.resolve(__dirname, 'src/styles'),
   '@utils': path.resolve(__dirname, 'src/utils'),
@@ -35,43 +31,20 @@ export default defineConfig({
   },
   envPrefix: 'chaunt',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.json'],
+    extensions: ['.js', '.jsx', '.scss', '.json'],
     alias: aliases,
   },
   build: {
-    sourcemap: !isProdMode,
-    minify: 'terser',
+    outDir: 'dist',
+    sourcemap: !process.env.NODE_ENV === 'production',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
-          react: [
-            'react',
-            'react-dom',
-            'react-i18next',
-            'react-redux',
-            'react-resize-detector',
-            'react-router-dom',
-            'redux-first-history',
-          ],
-          vendor: [
-            'axios',
-            'history',
-            'i18next',
-            'i18next-browser-languagedetector',
-            'i18next-http-backend',
-            'js-cookie',
-            'lodash',
-          ],
+          react: ['react', 'react-dom', 'react-i18next', 'react-resize-detector', 'react-router-dom'],
+          vendor: ['axios', 'i18next', 'i18next-browser-languagedetector', 'i18next-http-backend', 'js-cookie', 'lodash'],
           // else: use index.[id].js
         },
-      },
-    },
-    terserOptions: {
-      format: {
-        beautify: false,
-      },
-      compress: {
-        passes: 3,
       },
     },
   },
@@ -82,34 +55,6 @@ export default defineConfig({
     }),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|webp|svg)$/i,
-    }),
-    VitePWA({
-      mode: isProdMode ? 'production' : 'development',
-      injectRegister: 'auto',
-      registerType: 'autoUpdate',
-      strategies: 'injectManifest',
-      srcDir: 'src',
-      filename: 'sw.ts',
-      outDir: 'dist',
-      devOptions: {
-        enabled: false,
-        type: 'module',
-      },
-      injectManifest: {
-        swDest: 'dist/sw.js',
-      },
-      manifest: {
-        name: 'chaunt_vite_template',
-        short_name: 'chaunt_vite_template',
-        prefer_related_applications: true,
-
-        related_applications: [
-          {
-            platform: 'play',
-            url: 'https://play.google.com/store/apps/details?id=vn.abs.app',
-          },
-        ],
-      },
     }),
   ],
 });
