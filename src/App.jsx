@@ -1,10 +1,17 @@
 import { createBrowserRouter, RouterProvider, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AnimatedCursor from 'react-animated-cursor';
+import timezone from 'dayjs/plugin/timezone';
+import dayjs from 'dayjs';
 
 import DashboardLayout from '@layout/dashboard';
 
-import '@styles/App.scss';
+import '@styles/common.scss';
+import '@styles/normalize.scss';
+import 'dayjs/locale/vi';
+
+dayjs.extend(timezone);
+dayjs.tz.setDefault('Asia/Ho_Chi_Minh');
 
 const router = createBrowserRouter([
   {
