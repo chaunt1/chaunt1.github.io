@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import fs from 'fs/promises';
 
 export const aliases = {
   '@': path.resolve(__dirname, 'src'),
@@ -46,6 +47,26 @@ export default defineConfig({
           // else: use index.[id].js
         },
       },
+    },
+  },
+  esbuild: {
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: [],
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      plugins: [
+        {
+          name: 'load-js-files-as-jsx',
+          setup(build) {
+            build.onLoad({ filter: /src\/.*\.js$/ }, async (args) => ({
+              loader: 'jsx',
+              contents: await fs.readFile(args.path, 'utf8'),
+            }));
+          },
+        },
+      ],
     },
   },
   plugins: [
